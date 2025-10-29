@@ -8,7 +8,7 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
- 
+ https:/todo-client-seven-iota.vercel.app/new
 }));
 
 // app.use(cors({
