@@ -35,6 +35,12 @@ const TODO_ITEMS = [
   },
 ];
 
+app.get('/',(req,res)=>{
+    res.json({
+        message:`welcome to Expense Tracker API`
+    })
+})
+
 app.get("/todos", (req, res) => {
   res.json({
     success: true,
