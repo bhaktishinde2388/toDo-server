@@ -1,19 +1,15 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
-import mongoose from "mongoose";
 
 dotenv.config();
 
 const app = express();
 
-// app.use(cors({
-//  https:/todo-client-seven-iota.vercel.app/new
-// }));
-
 app.use(cors({
-  origin: " https:/todo-client-seven-iota.vercel.app/new"
+  origin: "https://todo-frontend-nu-topaz.vercel.app"
 }));
+
 // app.use(cors({
 //   origin: process.env.CORS_ORIGIN
 // }));
@@ -181,8 +177,8 @@ app.patch("/todos/:id/status", (req, res) => {
     });
   });
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 8080;
 
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}🤩`);
+  console.log(`Server is running on port ${PORT}`);
 });
