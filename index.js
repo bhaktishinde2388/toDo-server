@@ -5,7 +5,7 @@ import cors from "cors";
 dotenv.config();
 
 const app = express();
-
+app.use(express.json());
 app.use(cors({
   // origin: "https://todo-frontend-nu-topaz.vercel.app"
 }));
@@ -14,7 +14,7 @@ app.use(cors({
 //   origin: process.env.CORS_ORIGIN
 // }));
 
-app.use(express.json());
+
 
 const TODO_ITEMS = [
   {
