@@ -7,7 +7,7 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin: "https://todo-frontend-nu-topaz.vercel.app"
+  // origin: "https://todo-frontend-nu-topaz.vercel.app"
 }));
 
 // app.use(cors({
@@ -177,7 +177,7 @@ app.patch("/todos/:id/status", (req, res) => {
     });
   });
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 4000;
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
